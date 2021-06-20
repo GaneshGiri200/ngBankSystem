@@ -1,0 +1,37 @@
+h2 {
+	text-align: center;
+	margin: 2rem 0;
+	font-size: 2.5rem;
+	color: #10ac84;
+	text-shadow: 1px 2px black;
+}
+
+table {
+	text-align: center;
+
+	thead {
+		background-color: #10ac84;
+		color: white;
+		text-shadow: 1px 1px 3px black;
+	}
+
+	td,th{
+		border: 1px solid #666;
+	}
+}
+
+.div-error {
+	text-align: center;
+	margin-top: 1rem;
+	span {
+		color: red;
+		font-size: 1.4rem;
+		font-weight: 500;
+	}
+}
+
+@media (max-width: 768px) {
+	h2 {
+		font-size: 2.1rem;
+	}
+}

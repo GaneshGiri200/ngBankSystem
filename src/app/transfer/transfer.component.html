@@ -1,0 +1,39 @@
+<div class="container">
+	<div class="userbox">
+		<h4>Select User & Tansfer Money</h4>
+		<form #refData="ngForm" (ngSubmit)="transferMoney(refData.value)">
+		<div class="user">
+			<table class="table table-light">
+			<thead>
+				<th>User Id</th>
+				<th>Name</th>
+				<th>Amount Avilable</th>
+			</thead>
+			<tbody>
+				<tr>
+					<td>{{userObj?.id}}</td>
+					<td>{{userObj?.name}}</td>
+					<td>{{userObj?.savings}}</td>
+				</tr>
+			</tbody>
+			</table>
+		</div>
+		
+		<div class="form-group">
+			<label>Select the user</label>
+			<select name="uid" class="form-control" #refUsername="ngModel" ngModel>
+				<option value="">Select user for money transfer</option>
+				<option [value]="user.id" *ngFor="let user of userData">[{{user.id}}] {{user.name}} ({{user.savings}})</option>
+			</select>
+		</div>
+
+		<div class="form-group">
+			<label>Enter Amount</label>
+			<input type="number" class="form-control" name="amount" placeholder="Enter transfer amount" ngModel required>
+		</div>
+		<div class="btn-box">
+			<button type="submit" class="btn btn-dark">Tansfer</button>
+		</div>
+		</form>
+	</div>
+</div>

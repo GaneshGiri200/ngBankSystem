@@ -1,0 +1,157 @@
+{
+  "users": [
+    {
+      "name": "Suresh Vani",
+      "email": "suresh@gmail.com",
+      "gender": "male",
+      "dob": "1999-10-09",
+      "savings": 56000,
+      "address": "Pune",
+      "mobile": 4455768692,
+      "id": 101
+    },
+    {
+      "name": "vinayak kale",
+      "email": "vinyakale@gmail.com",
+      "gender": "male",
+      "dob": "1985-11-09",
+      "savings": 54500,
+      "address": "Mumbai",
+      "mobile": 8903568692,
+      "id": 104
+    },
+    {
+      "name": "Shruti kale",
+      "email": "shrutikale@gmail.com",
+      "gender": "female",
+      "dob": "1996-3-09",
+      "savings": 76000,
+      "address": "Kolhapur",
+      "mobile": 5658493758,
+      "id": 105
+    },
+    {
+      "name": "Sangita Rathod",
+      "email": "sangita@yahoo.com",
+      "gender": "female",
+      "dob": "2000-05-09",
+      "savings": 65000,
+      "address": "Nanded",
+      "mobile": 7689578675,
+      "id": 106
+    },
+    {
+      "name": "Sima Vaghmare",
+      "email": "sangita@yahoo.com",
+      "gender": "female",
+      "dob": "1997-11-09",
+      "savings": 60000,
+      "address": "Mumbai",
+      "mobile": 7689578675,
+      "id": 109
+    },
+    {
+      "name": "Pranita kumbar",
+      "email": "sangita@yahoo.com",
+      "gender": "female",
+      "dob": "1993-06-09",
+      "savings": 86000,
+      "address": "Mumbai",
+      "mobile": 7689578675,
+      "id": 113
+    },
+    {
+      "name": "Yogesh Bharati",
+      "email": "yogesh@gamil.com",
+      "gender": "male",
+      "dob": "1998-06-11",
+      "savings": 47000,
+      "address": "Pune",
+      "mobile": 7754837564,
+      "id": 115
+    },
+    {
+      "name": "Sanjay Gupta",
+      "email": "sanju@gmail.com",
+      "gender": "male",
+      "savings": 70000,
+      "address": "Satara",
+      "mobile": 7875648765,
+      "id": 116
+    },
+    {
+      "name": "Rani Roy",
+      "email": "rani@gmail.com",
+      "gender": "female",
+      "dob": "1997-09-09",
+      "savings": 61000,
+      "address": "Kolkatta",
+      "mobile": 6756849876,
+      "id": 117
+    },
+    {
+      "name": "Samiksha Jhadhav",
+      "email": "samiksha@gmail.com",
+      "gender": "female",
+      "dob": "1989-07-04",
+      "savings": 70000,
+      "address": "Nagpur",
+      "mobile": 6798764687,
+      "id": 118
+    },
+    {
+      "name": "tsest",
+      "email": "test@test.gmail.com",
+      "gender": "male",
+      "savings": 30000,
+      "address": "Pune",
+      "mobile": 7648756389,
+      "id": 119
+    },
+    {
+      "name": "simpletest",
+      "email": "test@test.gmail.com",
+      "gender": "male",
+      "dob": "2021-06-17",
+      "savings": 30000,
+      "address": "Kolhapur",
+      "mobile": 7658769567,
+      "id": 120
+    },
+    {
+      "name": "user",
+      "email": "user@gmail.com",
+      "gender": "male",
+      "savings": 40000,
+      "address": "Nagpur",
+      "mobile": 5675674689,
+      "id": 121
+    }
+  ],
+  "history": [
+    {
+      "id": 1,
+      "statement": "Amount 16000 is transfered from Vinayak Sahay to Subham bhosale"
+    },
+    {
+      "statement": "Amount 26000 is transfered from Subham bhosale to Shruti kale",
+      "id": 2
+    },
+    {
+      "statement": "Amount 15000 is transfered from Rani Roy to Sima Vaghmare",
+      "id": 3
+    },
+    {
+      "statement": "Amount 20000 is transfered from Vinayak Sahay to Sangita Rathod",
+      "id": 4
+    },
+    {
+      "statement": "Amount 10000 is transfered from Sanjay Gupta to tsest",
+      "id": 5
+    },
+    {
+      "statement": "Amount 10000 is transfered from user to tsest",
+      "id": 6
+    }
+  ]
+}

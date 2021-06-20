@@ -1,0 +1,98 @@
+<h2>Users</h2>
+
+<div class="container">
+	<div class="row">
+		<div class="col-md-6 col-sm-12 useract">
+			<button class="btn add-btn btn-outline-success" (click)="addUser()">Add User</button>
+		</div>
+		<div class="col-md-6 col-sm-12 useract">
+			<div class="search-box">
+				<input type="text" class="form-control" placeholder="Search Here" [(ngModel)]="searchKey">
+			</div>
+		</div>
+	</div>
+	<div class="table-responsive">
+		<table class="table table-sm table-success table-hover">
+		<thead>
+			<th>User Id</th>
+			<th>Name</th>
+			<th>Gender</th>
+			<th>Address</th>
+			<th>Savings</th>
+			<th>Actions</th>
+			<th>Transaction</th>
+		</thead>
+		<tbody>
+			<tr *ngFor ="let user of userData |filter:searchKey | paginate: {itemsPerPage: 8, currentPage: p }">
+				<td>{{user.id}}</td>
+				<td>{{user.name}}</td>
+				<td>{{user.gender}}</td>
+				<td>{{user.address}}</td>
+				<td>{{user.savings}}</td>
+				<td>
+					<button class="btn mb-1 mx-1 btn-sm btn-outline-secondary" (click)="openModal(template)"><i class="fa fa-eye" aria-hidden="true"></i></button>
+					<button class="btn mb-1 mx-1 btn-sm btn-outline-success" [routerLink]="['/edit',user.id]"><i class="fa fa-pencil-square" aria-hidden="true"></i></button>
+					<button class="btn mb-1 mx-1 btn-sm btn-outline-danger" (click)="delete(user.id)"><i class="fa fa-trash" aria-hidden="true"></i></button>
+				</td>
+				<td>
+					<button class="btn-sm btn-outline-success" [routerLink]="['/transfer',user.id]">Tranfer Money</button>
+				</td>
+
+				<ng-template #template>
+				  <div class="modal-header">
+				    <h4 class="modal-title pull-left">{{user.name}}</h4>
+				    <button type="button" class="close pull-right" aria-label="Close" (click)="modalRef.hide()">
+				      <span aria-hidden="true">&times;</span>
+				    </button>
+				  </div>
+				  <div class="modal-body">
+				    <table class="table">
+				    	<tr>
+				    		<td>Id</td>
+				    		<td>{{user.id}}</td>
+				    	</tr>
+				    	<tr>
+				    		<td>Name</td>
+				    		<td>{{user.name}}</td>
+				    	</tr>
+				    	<tr>
+				    		<td>Email</td>
+				    		<td>{{user.email}}</td>
+				    	</tr>
+				    	<tr>
+				    		<td>Gender</td>
+				    		<td>{{user.gender}}</td>
+				    	</tr>
+				    	<tr>
+				    		<td>Date of Birth</td>
+				    		<td>{{user.dob}}</td>
+				    	</tr>
+				    	<tr>
+				    		<td>Saving</td>
+				    		<td>{{user.savings}}</td>
+				    	</tr>
+				    	<tr>
+				    		<td>Address</td>
+				    		<td>{{user.address}}</td>
+				    	</tr>
+				    	<tr>
+				    		<td>Mobile No.</td>
+				    		<td>{{user.mobile}}</td>
+				    	</tr>
+				    </table>
+				  </div>
+				</ng-template>
+
+			</tr>
+		</tbody>
+		</table>
+	</div>
+	<div class="pagination">
+		<pagination-controls class="pages" (pageChange)="p = $event"></pagination-controls>
+	</div>
+
+	<div class="div-error">
+		<span>{{dbError}}</span>
+	</div>
+
+</div>

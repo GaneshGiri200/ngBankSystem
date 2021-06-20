@@ -1,0 +1,79 @@
+<div class="container">
+	<div class="userbox">
+		<h4> Enter User Details</h4>
+		<form #refData="ngForm" (ngSubmit)="addData(refData.value)">
+			<div class="form-group">
+				<label>Enter Name:</label>
+			<input type="text" class="form-control" #refname="ngModel" name="name" placeholder="Enter User's Name" [pattern]="namePattern" ngModel required>
+				<div class="warn" *ngIf=" refname.invalid && refname.touched">
+					<div *ngIf="refname.hasError('required')">
+					This field is required.
+					</div>
+					<div *ngIf="refname.hasError('pattern')">
+					Full name must contain only character with minimum 3 and max 30
+					</div>
+				</div>
+			</div>
+
+			<div class="form-group">
+				<label>Enter email:</label>
+				<input type="text" name="email" #refemail="ngModel" class="form-control" placeholder="Enter User's Email ID" pattern="([A-Za-z0-9_\-\.])+\@([A-Za-z_\-\.]{5})+\.([A-Za-z]{2,4})" ngModel required>
+				<div class="warn" *ngIf="refemail.invalid && refemail.touched">
+					<div *ngIf="refemail.hasError('required')">  
+					This field is required.
+					</div>
+					<div *ngIf="refemail.hasError('pattern')">
+					Email id should be in proper formate
+					</div>
+				</div>
+			</div>
+
+			<div class="form-group">
+				<label>Select Gender:</label>
+			<input type="radio" name="gender" value="male" ngModel required><span>Male</span> <br>
+			<input type="radio" name="gender" value="female" ngModel required><span>Female</span>
+			</div>
+
+			<div class="form-group">
+				<label>Enter Date of Birth:</label>
+			<input type="date" class="form-control" name="date" placeholder="Enter Users's Date of Birth" ngModel required>
+			</div>
+
+			<div class="form-group">
+				<label>Enter Savings:</label>
+			<input type="number" class="form-control" name="savings" placeholder="Enter the Saving of User" ngModel required>
+			</div>
+
+			<div class="form-group">
+				<label>Enter Address:</label>
+			<input type="text" class="form-control" #refaddress="ngModel" name="address" placeholder="Enter User's Address" [pattern]="namePattern" ngModel required>
+			<div class="warn" *ngIf=" refaddress.invalid && refaddress.touched">
+					<div *ngIf="refaddress.hasError('required')">
+					This field is required.
+					</div>
+					<div *ngIf="refaddress.hasError('pattern')">
+					Adress must contain only character with minimum 3 and max 30
+					</div>
+				</div>
+			</div>
+
+			<div class="form-group">
+				<label>Enter Mobile No:</label>
+			<input type="number" class="form-control"  #refcontact="ngModel" name="mobile" placeholder="Enter User's Mobile Number" [pattern]="contactPattern" ngModel required>
+				<div class="warn" *ngIf="refcontact.invalid && refcontact.touched">
+					<div *ngIf="refcontact.hasError('required')">
+					This field is required.
+					</div>
+					<div *ngIf="refcontact.hasError('pattern')">
+					contact should contain min 10 numbers
+					</div>
+				</div>
+			</div>
+			
+			<div class="btn-box">
+				<button type="submit" class="btn btn-dark" [disabled]="refData.invalid">Add User</button>
+			</div>
+		</form>
+	</div>
+</div>
+

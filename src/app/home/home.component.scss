@@ -1,0 +1,60 @@
+h2 {
+	text-align: center;
+	margin: 2rem 0;
+	font-size: 2.5rem;
+	color: #10ac84;
+	text-shadow: 1px 2px black;
+}
+.nav-box {
+	text-align: center;
+	margin-top: 2rem;
+}
+.user {
+	width: 5rem+2.5rem;
+}
+
+.view-history {
+	width: 10rem+2.5rem;
+}
+
+.btn {
+	margin-top: 2.5rem;
+	color: black;
+	text-shadow:1px 1px 15px honeydew;
+	background-color: #10ac84;
+}
+
+.btn:hover {
+	color: honeydew;
+	text-shadow:1px 1px 2px transparent;
+	transform: scale(1.1);
+	transition: 100ms;
+}
+
+.btn:active {
+	color: white;
+	text-shadow:1px 1px 2px transparent;
+	transform: scale(1);
+	transition: 50ms;
+	
+}
+
+.container {
+	margin-bottom: 3rem;
+}
+
+@media (max-width: 768px) {
+
+	.user {
+	width: 5rem+1rem;
+	}
+
+	.view-history {
+		width: 10rem+1rem;
+	}
+
+	h2 {
+		font-size: 2.1rem;
+	}
+
+}

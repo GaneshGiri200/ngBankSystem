@@ -1,0 +1,47 @@
+
+.userbox {
+	width: 90%;
+	margin: 3rem auto;
+	border: 2px solid;
+	border-radius: 10px; 
+	background-color: #10ac84;
+
+	h4{
+		text-align: center;
+		margin-top: 1.5rem;
+		color: white;
+		text-shadow: 1px 1px 3px black;
+		font-weight: 400;
+	}
+
+	form {
+		width: 80%;
+		margin: 2rem auto;
+	}
+
+	label {
+		display: block;
+		margin-top: 1.5rem;
+		color: white;
+		text-shadow: 2px 2px 6px black;
+	}
+
+	input {
+		border: 2px solid;
+		margin-top: 2px;
+	}
+
+	span {
+		color: white;
+		text-shadow: 2px 2px 6px black;
+		margin-left: 5px;
+	}
+
+	.btn {
+		margin: 2rem 0;
+	}
+
+	.btn-box{
+		text-align: center;
+	}
+}
